@@ -1,15 +1,15 @@
-Name:               brotli
-Version:            1.0.5
-Release:            1%{?dist}
-Summary:            Lossless compression algorithm
+Name:                   brotli
+Version:                1.0.5
+Release:                1%{?dist}
+Summary:                Lossless compression algorithm
 
-License:            MIT
-URL:                https://github.com/google/brotli
-Source0:            https://github.com/google/brotli/archive/v%{version}.tar.gz
+License:                MIT
+URL:                    https://github.com/google/brotli
+Source0:                https://github.com/google/brotli/archive/v%{version}.tar.gz
 
-BuildRequires:      python2-devel python2-setuptools
-BuildRequires:      python%{python3_pkgversion}-devel python%{python3_pkgversion}-setuptools
-BuildRequires:      gcc-c++ gcc cmake
+BuildRequires:          python2-devel python2-setuptools
+BuildRequires:          python%{python3_pkgversion}-devel python%{python3_pkgversion}-setuptools
+BuildRequires:          gcc-c++ gcc cmake
 
 %description
 Brotli is a generic-purpose lossless compression algorithm that compresses
@@ -19,12 +19,12 @@ to the best currently available general-purpose compression methods.
 It is similar in speed with deflate but offers more dense compression.
 
 # -------------------------------------------------------------------------------------------------------------------- #
-# Package:
+# Package: python2-%{name}
 # -------------------------------------------------------------------------------------------------------------------- #
 
 %package -n python2-%{name}
-Summary:            Lossless compression algorithm (python 2)
-Requires:           python2
+Summary:                Lossless compression algorithm (python 2)
+Requires:               python2
 %{?python_provide:%python_provide python2-%{name}}
 
 %description -n python2-%{name}
@@ -36,12 +36,12 @@ It is similar in speed with deflate but offers more dense compression.
 This package installs a Python 2 module.
 
 # -------------------------------------------------------------------------------------------------------------------- #
-# Package:
+# Package: python%{python3_pkgversion}-%{name}
 # -------------------------------------------------------------------------------------------------------------------- #
 
 %package -n python%{python3_pkgversion}-%{name}
-Requires:           python%{python3_pkgversion}
-Summary:            Lossless compression algorithm (python 3)
+Requires:               python%{python3_pkgversion}
+Summary:                Lossless compression algorithm (python 3)
 %{?python_provide:%python_provide python%{python3_pkgversion}-%{name}}
 
 %description -n python%{python3_pkgversion}-%{name}
@@ -53,12 +53,12 @@ It is similar in speed with deflate but offers more dense compression.
 This package installs a Python 3 module.
 
 # -------------------------------------------------------------------------------------------------------------------- #
-# Package:
+# Package: %{name}-devel
 # -------------------------------------------------------------------------------------------------------------------- #
 
 %package -n %{name}-devel
-Summary:            Lossless compression algorithm (development files)
-Requires:           %{name}%{?_isa} = %{version}-%{release}
+Summary:                Lossless compression algorithm (development files)
+Requires:               %{name}%{?_isa} = %{version}-%{release}
 
 %description -n %{name}-devel
 Brotli is a generic-purpose lossless compression algorithm that compresses
