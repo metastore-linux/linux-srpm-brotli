@@ -1,10 +1,10 @@
 Name:                   brotli
-Version:                1.0.5
+Version:                1.0.7
 Release:                1%{?dist}
 Summary:                Lossless compression algorithm
-
 License:                MIT
 URL:                    https://github.com/google/brotli
+
 Source0:                https://github.com/google/brotli/archive/v%{version}.tar.gz
 
 BuildRequires:          python2-devel python2-setuptools
@@ -146,15 +146,18 @@ cd ..
 
 
 %changelog
+* Thu Nov 01 2018 Kitsune Solar <kitsune.solar@gmail.com> - 1.0.7-1
+- Update to 1.0.7.
+
 * Fri Jul 06 2018 Kitsune Solar <kitsune.solar@gmail.com> - 1.0.5-1
-- Update to 1.0.5
+- Update to 1.0.5.
 
 * Sun May 20 2018 Kitsune Solar <kitsune.solar@gmail.com> - 1.0.4-1
-- Update to 1.0.4
+- Update to 1.0.4.
 
 * Sat Dec 16 2017 Kitsune Solar <kitsune.solar@gmail.com> - 1.0.2-1
-- Update to 1.0.2
-- Build from RHEL7
+- Update to 1.0.2.
+- Build from RHEL7.
 
 * Fri Sep 22 2017 Travis Kendrick <pouar@pouar.net> - 1.0.1-1
 - update to 1.0.1
